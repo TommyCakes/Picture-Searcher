@@ -1,0 +1,151 @@
+@import url(http://fonts.googleapis.com/css?family=Karla);
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/*    section {
+  @include linear-gradient(to top, blue, lightblue);
+height:1000px;
+}*/
+/* background: red;*/
+body {
+  text-align: center;
+  font: 18px/1.5em "karla", sans-serif; }
+
+#logo {
+  padding-top: 20px;
+  width: 60%;
+  margin: 0 auto;
+  display: block; }
+
+.find {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .find::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+input {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  /* width: 67%;*/
+  margin-left: 2%;
+  margin-right: 2%; }
+  input:last-child {
+    margin-right: 0; }
+
+#get {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  padding: 10px;
+  width: 25%;
+  /*margin:0 auto;*/
+  background: lightblue;
+  border-radius: 10px 5px 5px 0px;
+  border: 1px solid skyblue;
+  font-size: 0.7em;
+  /*display: inline-block;*/ }
+  #get:last-child {
+    margin-right: 0; }
+
+h4 {
+  color: blue;
+  font-size: 1.6em;
+  padding: 10%;
+  margin: -3%; }
+
+.gallery {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  /*padding-top:10px;*/
+  /*margin-left:7%; */ }
+  .gallery::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+img {
+  width: 100%;
+  height: auto;
+  padding: -10px;
+  margin-bottom: 10px; }
+
+li.block {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  position: relative; }
+  li.block:last-child {
+    margin-right: 0; }
+  li.block:nth-child(3n) {
+    margin-right: 0; }
+  li.block:nth-child(3n+1) {
+    clear: left; }
+
+/*.pic {
+  width:30%;
+  height:auto;
+  margin: 0 auto;
+  display:inline;
+  padding:5px;
+}*/
+.text {
+  visibility: hidden;
+  position: absolute;
+  top: -0.1%;
+  /*left:10%;*/
+  margin: 0;
+  width: 100%;
+  height: auto;
+  color: black;
+  padding: 0;
+  text-align: center; }
+
+#likes {
+  font-size: 0.9em;
+  position: absolute;
+  margin: 0;
+  color: red;
+  width: 100%;
+  height: auto;
+  top: 30%;
+  text-align: center; }
+
+#followers {
+  font-size: 0.4em;
+  position: absolute;
+  margin: 0;
+  color: blue;
+  width: 100%;
+  height: 10%;
+  overflow: hidden;
+  top: 50%;
+  text-align: center; }
+
+#followers > h2 {
+  font-size: 0.3em;
+  text-align: center; }
+
+.block:hover .text, #texts {
+  visibility: visible;
+  transition: 0.5s linear all; }
+
+.pic:hover {
+  opacity: 0.2;
+  transition: 0.5s linear all; }

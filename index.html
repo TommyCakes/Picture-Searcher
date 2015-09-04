@@ -1,0 +1,61 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram-Search</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+</head>
+<body ng-app="instaApp" ng-controller="pictureSearch as app">
+
+<header>
+  <img id="logo" src='img/A.png'><br>
+</header>
+
+<section id="find" >
+  <form name="app.user" >
+  <input ng-model="app.input" required placeholder="Enter a tag to search"></input>
+  <button id='get' ng-click="app.getPictures()">Submit </button>
+
+  </form>
+
+
+<!-- <h3 ng-repeat="names in app.result.caption.from.full_name"> {{ names}}  </h3> -->
+<!-- <li ng-repeat="picture in app.results"> -->
+<!--<img ng-src="{{picture.images.standard_resolution.url}}" alt="">-->
+<!-- </li> -->
+
+
+  <div id="message" ng-show="app.user.$submitted" >
+    <h4> We found {{app.results.length}} results for "{{ app.input}}"</h4>
+  </div>
+</section>
+
+
+
+<!-- ng-repeat using arrays/ need images / user / caption / link to prfile / no of likes -->
+
+<section class="gallery" >
+
+<li class='block' ng-repeat="p in app.results">
+
+  <a target='_blank' href="{{p.link}} " ><img class="pic" ng-src="{{p.images.standard_resolution.url}}" alt=""></a>
+  <h2 class='text'>
+  {{p.caption.from.full_name}}
+  </h2>
+  <h2 class='text' id="likes">
+  <i class="fa fa-heart"></i>
+    {{p.likes.count}}
+  </h2>
+  <h2 class='text' id="followers">
+    {{p.caption.text}}
+  </h2>
+  <!--<span></span>-->
+  </li>
+
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
